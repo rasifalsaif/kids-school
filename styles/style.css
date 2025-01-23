@@ -11,7 +11,9 @@ body{
     font-style: normal;
     color:rgb(17, 17, 17)
 }
-
+/* main, header{
+    background: rgba(30, 30, 30, .04 );
+} */
 /* shared */
 
 .container{
@@ -22,8 +24,30 @@ body{
     display: flex;
 }
 
+.bg-image{
+    background-image: url(../assets/bg.png) ;
+}
+.section-heading{
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    margin-bottom: 1rem;
+}
+.layer{
+    background: rgba(30, 30, 30, .04 );
+}
+section{
+    
+}
 
-
+.reg-p{
+    color: rgb(102, 102, 102);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.85rem;
+}
 
 
 
@@ -31,7 +55,7 @@ body{
 /* header section */
 .header{
     background: rgb(247, 247, 247);
-    border-bottom: 1px dashed rgb(177, 164, 164);
+    border-bottom: 1px dashed rgba(78, 70, 70, .2);
 }
 .navbar{
     padding-top: .8rem;
@@ -121,14 +145,162 @@ body{
 }
 
 
+/* curriculum section */
+.layer{
+    border-bottom: 1px dashed rgba(78, 70, 70, .2);
+}
+.st-card{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    
+}
+
+.card{
+    padding: 2rem;
+    border-radius: 18.86px;
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+.card-title{
+    color: rgb(32, 32, 32);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+}
+.card img, h3, p{
+    margin-bottom: 1rem;
+}
+
+.card-btn{
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+#card-1{
+    border: 0.94px solid rgb(222, 245, 255);
+    background: linear-gradient(180.00deg, rgb(222, 245, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+#card-2{
+    border: 0.94px solid rgb(255, 244, 220);
+    background: linear-gradient(180.00deg, rgb(255, 244, 220),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+/* #card-2, #card-3 .card-title{
+    padding-top: .6rem;
+} */
+
+#card-2 img{
+    margin-bottom: 1.7rem;
+}
+#card-3 img{
+    margin-bottom: 1.7rem;
+}
+#card-3{
+    border: 0.94px solid rgb(242, 232, 255);
+    background: linear-gradient(180.00deg, rgb(238, 225, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+.next-pre{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    padding-bottom: 3rem;
+    
+}
+.left, .right{
+    background-color: rgb(254, 163, 1);
+    padding:.2rem 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 
+/* stories */
+.our-stories{
+    background: url(image),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+}
+.stories-container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+.stories-content{
+    /* width: 40%; */
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    padding: .1rem;
+    margin-bottom: .6rem;
+}
+.stories-content img{
+    width: 100%;
+}
+.stories-content img, .stories-grid img{
+    border-radius: 10px;
+}
 
+.stories-content div, .stories-content h2, .stories-content p{
+    padding: 1rem 2rem;
+}
 
+/* .st-content{
+    padding: 2rem;
+} */
+.stories-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+.stories-grid img{
+    width: 100%;
+}
 
+.grid-card{
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    margin:0 .3rem;
+    margin-bottom: .6rem;
+    
+}
 
+.grid-card div, .grid-card h2{
+    padding: .5rem 1rem;
+}
 
+.btn-btn{
+    border-radius: 47.93px;
+    color: rgb(255, 255, 255);
+    font-size:1rem;
+    font-weight: 500;
+    line-height: 1.85rem;
+    padding: .6rem .8rem;
+    border: none;
+    /* margin-top: -100px; */
+}
+.st-btn{
+    margin-top: -40px;
+}
+.t-00{
+    background: rgb(60, 216, 232);
+    margin-top: -5px;
+}
+.t-01{
+    background: rgb(149, 178, 38);
+   
+}
+.t-02{
+    background: rgb(93, 88, 240);
+   
+}
 
+.stories-view{
+    margin: 2rem auto;
+    text-align: center;
+}
 
 
 
@@ -170,8 +342,32 @@ body{
     .banner-img{
         width: 100%;
     }
+    .st-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .stories-container{
+        flex-direction: column;
+    }
+    .stories-content{
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+
+
+
+
+    
 
 }
+
+
+
+
+
 @media screen and (max-width:576px){
     .header{
         border-bottom: none;
@@ -209,7 +405,25 @@ body{
     .banner-img{
         width: 100%;
     }
-    
+    .st-card{
+        flex-direction: column;
+        padding: .8rem 1rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .card{
+        margin-bottom: 1.5rem;
+    }
+    .next-pre{
+        margin-top: 2rem;
+    }
+    .section-heading{
+        font-size: 2.5rem;
+    }
+
+    .stories-grid img{
+        width: 100%;
+    }
 
 }
 
